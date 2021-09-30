@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const path = require('path')
 app.use(express.urlencoded({ extended: true }));
-
+const port = process.env.PORT || 3000
 
 const fs = require('fs-extra')
 let productPage ={}
@@ -67,6 +67,6 @@ app.get('/', (req, res) => {
     res.render('home/home.ejs')
 })
 
-app.listen(3000, () => {
-    //console.log("APP IS LISTENING ON PORT 3000")
+app.listen(port, () => {
+    console.log("APP IS LISTENING ON PORT" + port)
 })
