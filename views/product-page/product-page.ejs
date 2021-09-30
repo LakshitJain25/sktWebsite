@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="product-page/style.css">
+    <title>Oca lamination machines</title>
+</head>
+
+<body>
+    <div class="container" id="container">
+
+
+        <header>
+            <div class="header-1">
+                <div class="logo-container">
+                    <a href="/" class="logo-skt">
+                        <h3>SKT</h3>
+                    </a>
+                    <div href="#" class="logo-golcha-container">
+                        <img src="../pics/ezgif.com-gif-maker (1).gif" alt="" srcset="">
+                        <h3 class="golcha-heading">G<h3 class="golcha-heading-afterG">olcha.com</h3>
+                        </h3>
+                    </div>
+                </div>
+                <div class="hamburger">
+                    <button class="hamburger-btn"><i class="fa fa-bars"></i></button>
+                </div>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="aboutus">About Us</a></li>
+                        <li><a href="/#products">Products</a></li>
+                        <li><a href="support">Support</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="hero" id="hero">
+            <div class="hero-container">
+                <div class="product-images">
+                    <div class="big-images">
+                        <img src="<%= Images[0] %>" alt="">
+                    </div>
+                    <div class="small-images">
+                        <% for(let i=0;i<Images.length;i++){ %>
+                            <% if(i===0){ %>
+                                <img src="<%= Images[i] %>" alt="" srcset="" data-image="<%=i+1%>" class="active">
+                                <%} else{ %>
+                                    <img src="<%= Images[i] %>" alt="" srcset="" data-image="<%=i+1%>">
+                                    <% } }%>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <div class="product-title">
+                        <h2>
+                            <%=productName %>
+                        </h2>
+                    </div>
+                    <div class="product-reviews">
+                        <div class="product-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <a href="#">Read Reviews</a>
+                    </div>
+                    <div class="product-price">
+                        <h2>
+                            <%=Info.price %>
+                        </h2>
+                    </div>
+                    <div class="product-tagline">
+                        <p>
+                            <%=Info.subDetail %>
+                        </p>
+                    </div>
+                    <div class="product-buy-button">
+                       <a href="https://api.whatsapp.com/send?phone=919212090095&text=<%='I Would like to buy ' + productName %>"><button class="product-btn">Buy Now</button></a> 
+                    </div>
+                    <div class="product-video">
+                        <iframe src="<%= Info.videoLink %>" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="details" id="details">
+            <div class="details-container">
+                <div class="heading">
+                    <h2>DETAILS</h2>
+                </div>
+                <% for( let index=0; index < Object.keys(Details).length; index++ ) { %>
+                    <div class="subHeading">
+
+                        <div class="heading">
+                            <h2>
+                                <%= Object.keys(Details)[index] %>
+                            </h2>
+                        </div>
+                        <% for (let i=0; i < Details[Object.keys(Details)[index]].length; i++) { %>
+                            <p>
+                                <%= Details[Object.keys(Details)[index]][i] %>
+                            </p>
+                            <% } %>
+                    </div>
+                    <% } %>
+            </div>
+        </section>
+        <section class="reviews" id="reviews">
+            <div class="reviews-container">
+                <div class="heading">
+                    <h2>REVIEWS</h2>
+                </div>
+                <div class="all-reviews">
+                    <% if(Reviews.length==0){ %>
+                        <div class="review-content">
+                            <div class="review-name">
+                                <h2>No Reviews Yet</h2>
+                            </div>
+                            <div class="review-paragraph">
+                                <p></p>
+                            </div>
+                        </div>
+                        <% } else { Reviews.forEach(Review=> { %>
+
+                            <div class="review-content">
+                                <div class="review-name">
+                                    <h2>
+                                        <%= Review.reviewer %>
+                                    </h2>
+                                </div>
+                                <div class="review-paragraph">
+                                    <p>
+                                        <%= Review.review %>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <% })}%>
+                </div>
+                <div class="review-form">
+                    <div class="review-heading">
+                        <h3>Leave A Review</h3>
+                    </div>
+                    <div class="review-form-input">
+                        <!-- <div class="star-widget">
+                            <input type="radio" name="rate" id="rate-5">
+                            <label for="rate-5" class="fas fa-star"></label>
+                            <input type="radio" name="rate" id="rate-4">
+                            <label for="rate-4" class="fas fa-star"></label>
+                            <input type="radio" name="rate" id="rate-3">
+                            <label for="rate-3" class="fas fa-star"></label>
+                            <input type="radio" name="rate" id="rate-2">
+                            <label for="rate-2" class="fas fa-star"></label>
+                            <input type="radio" name="rate" id="rate-1">
+                            <label for="rate-1" class="fas fa-star"></label>
+                        </div> -->
+                        <form action="/<%=productName %>/reviews" method="POST" class="review-input">
+                            <div class="review-input-name">
+                                <label for="review-input-name">Name:</label>
+                                <input type="text" id="review-name" name="reviewer" required>
+                            </div>
+                            <div class="review-textarea">
+                                <label for="review-text">Review:</label>
+                                <textarea name="review" id="review-text" cols="30" rows="4" required></textarea>
+                            </div>
+                            <button>Submit</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </section>
+        <footer>
+            <div class="line-1">
+                <p>COPYRIGHT © 2021 GOLCHA.COM. ALL RIGHTS RESERVED</p>
+            </div>
+            <div class="line-2">
+                <a href="#">About Us</a>
+                <a href="#">Product</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </footer>
+        <div class="floating-buttons">
+            <div class="floating-buttons-container">
+                <a href="https://wa.me/+919212090095"> <i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="product-page/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,463 @@
+* {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-transform: capitalize;
+  text-decoration: none;
+  -webkit-transition: all 0.2s cubic-bezier(0.37, 1.14, 0.26, 1.24);
+  transition: all 0.2s cubic-bezier(0.37, 1.14, 0.26, 1.24);
+}
+
+*:root {
+  --light-green: #cbeb39;
+  --leaf-green: #7bb601;
+  --light-gray: #f2f2f2;
+  --darker-gray: #e5e5e5;
+  --dark-gray: #c4c4c4;
+  --whatsapp-green: #075e54;
+}
+
+*::-moz-selection {
+  background: var(--leaf-green);
+  color: white;
+}
+
+*::selection {
+  background: var(--leaf-green);
+  color: white;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body, html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+@font-face {
+  font-family: bahamas;
+  src: url(../fonts/BahamasBold.ttf);
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: [container-start] 1fr [center-start] ([col-start] minmax(min-content, 11rem) [col-end])[10] [center-end] 1fr [container-end];
+      grid-template-columns: [container-start] 1fr [center-start] repeat(10, [col-start] minmax(-webkit-min-content, 11rem) [col-end]) [center-end] 1fr [container-end];
+      grid-template-columns: [container-start] 1fr [center-start] repeat(10, [col-start] minmax(min-content, 11rem) [col-end]) [center-end] 1fr [container-end];
+  -ms-grid-rows: (min-content)[4];
+      grid-template-rows: repeat(4, -webkit-min-content);
+      grid-template-rows: repeat(4, min-content);
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  background-color: black;
+  height: 5rem;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  grid-column: container-start/container-end;
+  -ms-grid-columns: [container-start] 1fr [center-start] ([col-start] minmax(min-content, 11rem) [col-end])[10] [center-end] 1fr [container-end];
+      grid-template-columns: [container-start] 1fr [center-start] repeat(10, [col-start] minmax(-webkit-min-content, 11rem) [col-end]) [center-end] 1fr [container-end];
+      grid-template-columns: [container-start] 1fr [center-start] repeat(10, [col-start] minmax(min-content, 11rem) [col-end]) [center-end] 1fr [container-end];
+}
+
+header .header-1 {
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-column: center-start/center-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header-1 .logo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .header-1 .logo-container .logo-skt {
+  font-size: 3.5rem;
+  color: var(--light-green);
+}
+
+header .header-1 .logo-container .logo-golcha-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 5rem;
+}
+
+header .header-1 .logo-container .logo-golcha-container img {
+  height: 4rem;
+}
+
+header .header-1 .logo-container .logo-golcha-container .golcha-heading {
+  font-family: bahamas;
+  font-size: 3rem;
+  color: var(--light-green);
+}
+
+header .header-1 .logo-container .logo-golcha-container .golcha-heading-afterG {
+  font-family: bahamas;
+  font-size: 3rem;
+  color: var(--light-green);
+  text-transform: lowercase;
+}
+
+header .header-1 .hamburger {
+  display: none;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+header .header-1 .hamburger .hamburger-btn i {
+  font-size: 2rem;
+  padding: 0.3rem 0.5rem;
+  text-align: center;
+}
+
+header .header-1 .navbar ul {
+  list-style: none;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header-1 .navbar ul li a {
+  margin-left: 5rem;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+header .header-1 .navbar ul li a:hover {
+  color: var(--light-green);
+}
+
+/* ================================================================FOOTER========================================================== */
+footer {
+  background: #141414;
+  padding: 5rem;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-column: container-start/container-end;
+}
+
+footer .line-1 {
+  padding-bottom: 2.5rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 0.15rem solid white;
+}
+
+footer .line-2 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-top: 2.5rem;
+  padding-bottom: 1rem;
+}
+
+footer .line-2 a {
+  color: white;
+}
+
+footer .line-2 a:hover {
+  color: var(--light-green);
+}
+
+/* ================================================================FOOTER========================================================== */
+/* ================================================================HERO========================================================== */
+.hero {
+  display: -ms-grid;
+  display: grid;
+  grid-column: container-start/container-end;
+  -ms-grid-columns: [container-start] 1fr [center-start] ([col-start] minmax(min-content, 11rem) [col-end])[10] [center-end] 1fr [container-end];
+      grid-template-columns: [container-start] 1fr [center-start] repeat(10, [col-start] minmax(-webkit-min-content, 11rem) [col-end]) [center-end] 1fr [container-end];
+      grid-template-columns: [container-start] 1fr [center-start] repeat(10, [col-start] minmax(min-content, 11rem) [col-end]) [center-end] 1fr [container-end];
+}
+
+.hero .hero-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-column: center-start/center-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero .hero-container .contact-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 5rem 0;
+}
+
+.hero .hero-container i {
+  font-size: 35rem;
+  position: relative;
+}
+
+.hero .hero-container i:nth-child(2) {
+  color: var(--whatsapp-green);
+}
+
+.hero .hero-container i .phone-links {
+  font-size: 2rem;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 10rem;
+  left: 3.75rem;
+}
+
+.hero .hero-container i .whatsapp-links {
+  font-size: 2rem;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 6rem;
+  left: 8rem;
+}
+
+.hero .hero-container i a button {
+  font-size: 2.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.2rem;
+  background-color: green;
+  margin-bottom: 4rem;
+  color: white;
+}
+
+.hero .hero-container .whatsapp-links button:nth-child(1) {
+  margin-bottom: 15rem;
+}
+
+.hero .hero-container i a button:hover {
+  font-size: 2.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.2rem;
+  background: black;
+  color: white;
+}
+
+.hero .hero-container .map {
+  padding: 2rem 0.5rem;
+}
+
+.hero .hero-container .map iframe {
+  height: 40rem;
+  width: 70rem;
+}
+
+/* ================================================================HERO========================================================== */
+@media (max-width: 1024px) {
+  html {
+    font-size: 53%;
+  }
+  header .header-1 .hamburger {
+    position: relative;
+    display: block;
+  }
+  header .header-1 .navbar {
+    position: fixed;
+    opacity: 0;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    padding: 5rem 2rem;
+    -webkit-transform: translate(-50%, -500%);
+            transform: translate(-50%, -500%);
+    -webkit-box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border: 4px dashed #cbeb39;
+  }
+  header .header-1 .navbar-toggle {
+    opacity: 1;
+    z-index: 100;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  header .header-1 .navbar ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .header-1 .navbar ul li {
+    text-align: center;
+    margin: 3rem 2rem;
+    position: relative;
+    border-top: 3px solid #7bb601;
+    border-bottom: 3px solid #7bb601;
+  }
+  header .header-1 .navbar ul li a {
+    text-align: center;
+    font-size: 3rem;
+    margin: 3rem 2rem;
+    color: white;
+  }
+  header .header-1 .navbar ul li a:hover {
+    text-align: center;
+    font-size: 3.5rem;
+    margin: 10rem 2rem;
+    color: var(--light-green);
+  }
+  .reviews .reviews-container .all-reviews {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 728px) {
+  html {
+    font-size: 48%;
+  }
+  header .header-1 {
+    padding: 0 5rem;
+  }
+  .hero .hero-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 4;
+    grid-column: 5/9;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .hero .hero-container .product-details {
+    margin: 0;
+    margin-top: 5rem;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 42%;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 36%;
+  }
+}
+
+@media (max-width: 380px) {
+  html {
+    font-size: 30%;
+  }
+}
+
+@media (max-width: 330px) {
+  html {
+    font-size: 25%;
+  }
+  header .header-1 .hamburger .hamburger-btn i {
+    font-size: 3rem;
+    padding: 0 0.5rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 230px) {
+  html {
+    font-size: 20%;
+  }
+}
+
+@media (max-width: 150px) {
+  html {
+    font-size: 14%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

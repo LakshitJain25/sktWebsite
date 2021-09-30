@@ -1,0 +1,647 @@
+* {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+    // overflow-x: hidden;
+    transition: all 0.2s cubic-bezier(0.37, 1.14, 0.26, 1.24);
+}
+
+*:root {
+    --light-green: #cbeb39;
+    --leaf-green: #7bb601;
+    --light-gray: #f2f2f2;
+    --darker-gray: #e5e5e5;
+    --dark-gray: #c4c4c4;
+    --whatsapp-green: #075e54;
+}
+
+*::selection {
+    background: var(--leaf-green);
+    color: white;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body,
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+@font-face {
+    font-family: bahamas;
+    src: url(../fonts/BahamasBold.ttf);
+}
+
+.container {
+    display: grid;
+    grid-template-columns:
+        [container-start] 1fr [center-start] repeat(10, [col-start] minmax(min-content, 11rem) [col-end])
+        [center-end] 1fr [container-end];
+    grid-template-rows: repeat(5, min-content);
+    height: 100%;
+    width: 100%;
+}
+// ========================================================header=====================================================
+
+header {
+    background-color: black;
+    height: 5rem;
+    text-align: center;
+    display: grid;
+    grid-column: container-start/container-end;
+    grid-template-columns:
+        [container-start] 1fr [center-start] repeat(10, [col-start] minmax(min-content, 11rem) [col-end])
+        [center-end] 1fr [container-end];
+}
+
+header .header-1 {
+    height: 5rem;
+    // background-color: aqua;
+    display: flex;
+    grid-column: center-start/center-end;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .header-1 .logo-container {
+    display: flex;
+}
+
+header .header-1 .logo-container .logo-skt {
+    font-size: 3.5rem;
+    color: var(--light-green);
+}
+header .header-1 .logo-container .logo-golcha-container {
+    display: flex;
+    // flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5rem;
+}
+
+header .header-1 .logo-container .logo-golcha-container img {
+    height: 4rem;
+}
+
+header .header-1 .logo-container .logo-golcha-container .golcha-heading {
+    font-family: bahamas;
+    font-size: 3rem;
+    color: var(--light-green);
+}
+header .header-1 .logo-container .logo-golcha-container .golcha-heading-afterG {
+    font-family: bahamas;
+    font-size: 3rem;
+    color: var(--light-green);
+    text-transform: lowercase;
+}
+header .header-1 .hamburger {
+    display: none;
+    height: max-content;
+}
+
+header .header-1 .hamburger .hamburger-btn i {
+    font-size: 2rem;
+    padding: 0.3rem 0.5rem;
+    text-align: center;
+}
+header .header-1 .navbar ul {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .header-1 .navbar ul li a {
+    margin-left: 5rem;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+header .header-1 .navbar ul li a:hover {
+    color: var(--light-green);
+}
+
+// ========================================================header=====================================================
+// ========================================================HERO=====================================================
+.hero {
+    background-color: var(--light-gray);
+    height: max-content;
+    grid-column: container-start/container-end;
+    display: grid;
+    grid-template-columns:
+        [container-start] 1fr [center-start] repeat(10, [col-start] minmax(min-content, 11rem) [col-end])
+        [center-end] 1fr [container-end];
+    padding-bottom: 3rem;
+}
+.hero .hero-container {
+    grid-column: center-start/center-end;
+    display: flex;
+    padding: 3rem 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.hero .hero-container .hero-container-info {
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero .hero-container .hero-container-info .hero-info {
+    padding: 0rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero .hero-container .hero-container-info .hero-info .golcha-logo {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.hero .hero-container .hero-container-info .hero-info .golcha-logo img {
+    height: 10rem;
+}
+
+.hero .hero-container .hero-container-info .hero-info .golcha-logo .golcha-heading {
+    font-family: bahamas;
+    font-size: 8rem;
+    color: var(--leaf-green);
+}
+.hero .hero-container .hero-container-info .hero-info .golcha-logo .golcha-heading-afterG {
+    font-family: bahamas;
+    font-size: 8rem;
+    color: var(--leaf-green);
+    text-transform: lowercase;
+}
+
+.hero .hero-container .hero-container-info .hero-info .skt-heading {
+    font-size: 3.45rem;
+}
+
+.hero .hero-container .hero-container-info .hero-info p {
+    font-size: 2rem;
+    line-height: 3rem;
+}
+.hero .hero-container .hero-container-info .hero-buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.hero .hero-container .hero-container-info .hero-buttons a {
+    margin-top: 1rem;
+}
+
+.btn-1,
+.btn-2 {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+    border: none;
+    margin-right: 3rem;
+}
+
+.btn i {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.whatsapp-btn {
+    background-color: var(--whatsapp-green);
+    color: white;
+}
+
+.whatsapp-btn:hover {
+    color: var(--whatsapp-green);
+    background-color: white;
+}
+
+.phone-btn {
+    background-color: var(--dark-gray);
+    color: black;
+}
+
+.phone-btn:hover {
+    color: var(--dark-gray);
+    background-color: black;
+}
+
+.hero .hero-container .hero-container-image-container {
+    position: relative;
+}
+.hero .hero-container .hero-container-image-container .hero-container-image .img-bg {
+    background-color: var(--leaf-green);
+    height: 30rem;
+    width: 30rem;
+    position: absolute;
+    top: 10%;
+    transform: translateX(-50%);
+    left: 50%;
+    z-index: -1;
+}
+
+.hero .hero-container .hero-container-image-container .hero-container-image {
+    position: relative;
+    z-index: 0;
+    /* background-color: var(--leaf-green); */
+    /* overflow: hidden; */
+}
+
+.hero .hero-container .hero-container-image-container .phone-container {
+    position: absolute;
+    top: 30%;
+    height: 20%;
+    max-width: 100%;
+    left: -20%;
+    /* background-color: red; */
+}
+
+.hero .hero-container .hero-container-image-container .phone-container img {
+    height: 15rem;
+    animation: move 3s none infinite;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(650%);
+    }
+}
+.hero .hero-container .hero-container-image-container .hero-container-image .product-image {
+    z-index: -1;
+    height: 40rem;
+}
+// ========================================================HERO=====================================================
+// ========================================================PRODUCTS=====================================================
+.products {
+    // background-color: var(--leaf-green);
+    height: max-content;
+    grid-column: container-start/container-end;
+    display: grid;
+    // grid-template-columns:
+    //     [container-start] 1fr [center-start] repeat(10, [col-start] minmax(min-content, 11rem) [col-end])
+    //     [center-end] 1fr [container-end];
+    padding-bottom: 3rem;
+}
+
+
+.heading {
+    font-size: 2.75rem;
+    text-align: center;
+    padding-top:3rem;
+    padding-bottom:2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.heading h2 {
+    border: 0.5rem solid #000000;
+}
+
+/* .products .product-section{
+    margin-bottom:4rem;
+} */
+.products .product-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.products .product-cards-container .product-card {
+    background: black;
+    margin: 0 5rem;
+    margin-top: 3rem;
+    width: 32rem;
+    box-shadow: 0px 4px 4px -1px #000000;
+}
+.products .product-cards-container .product-card {
+    /* border: 3px solid #000000; */
+    text-align: center;
+}
+.products .product-cards-container .product-card .product-card-image {
+    width: 32rem;
+}
+.products .product-cards-container .product-card .product-card-image img {
+    height: 32rem;
+    width: 100%;
+    object-fit: fill;
+}
+
+.products .product-cards-container .product-card .product-card-title {
+    font-size: 1.5rem;
+    color: white;
+    padding: 0 0.1rem;
+}
+
+.products .product-cards-container .product-card .product-card-price {
+    font-size: 2.5rem;
+    color: var(--light-green);
+    padding: 0 0.1rem;
+}
+
+.products .product-cards-container .product-card .product-card-stars i {
+    color: orange;
+    font-size: 2rem;
+}
+.products .product-cards-container .product-card .product-card-btn {
+    margin: 0.75rem;
+}
+.products .product-cards-container .product-card .product-card-btn button {
+    border: none;
+    background: var(--leaf-green);
+    padding: 0.3rem;
+    font-size: 2.25rem;
+
+    font-weight: bold;
+    margin-top:0.4rem;
+}
+.products .product-cards-container .product-card .product-card-btn button a{
+    color:black;
+
+}
+.products .product-cards-container .product-card .product-card-btn button:hover {
+    border: 2px solid #fff;
+    color: white;
+    background: none;
+}
+.products .product-cards-container .product-card .product-card-btn button:hover a{
+    color:white;
+}
+// ========================================================PRODUCTS=====================================================
+// ========================================================REVIEWS=====================================================
+.reviews{
+    height: max-content;
+    grid-column: container-start/container-end;
+    padding-bottom: 3rem;
+    display: grid;
+    grid-template-columns:
+        [container-start] 1fr [center-start] repeat(10, [col-start] minmax(min-content, 11rem) [col-end])
+        [center-end] 1fr [container-end];
+    grid-template-rows: 2;  
+      
+    // background-color: #7bb601;
+    // width:100%;
+}
+.heading{
+    grid-column: container-start/container-end;
+    grid-row: 1/2;
+    margin-bottom:2rem;
+}
+.reviews-container{
+    grid-column: center-start/center-end;
+    grid-row: 2/3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.reviews-container a{
+    color:black;
+    text-align: center;
+    box-shadow: 0px 0px 15px -5px rgba(0,0,0,0.93);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height:27rem;
+    padding:0rem 2rem;
+    width:30rem;
+    margin-bottom:3rem;
+}
+
+.reviews-container a:hover{
+    box-shadow: 0px 0px 15px -5px var(--dark-gray);
+}
+
+.reviews-container a .review-card .review-image img{
+    height:7rem;
+    margin-bottom:0.3rem;
+}
+
+.reviews-container a .review-card .review-name{
+    font-size:2rem;
+    margin:0.3rem 0rem;
+}
+
+.reviews-container a .review-card .review-stars{
+    color: orange;
+    font-size: 2rem;
+    margin-bottom:0.6rem;
+}
+
+.reviews-container a .review-card .review-text{
+    font-size:1.5rem;
+   
+}
+
+
+
+// ========================================================REVIEWS=====================================================
+
+
+/* ================================================================FOOTER========================================================== */
+footer{
+    background: #141414;
+    padding:5rem;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size:2rem;
+    justify-content: center;
+    grid-column: container-start/container-end;
+}
+
+
+footer .line-1{
+    padding-bottom:2.5rem;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 0.15rem solid white;
+}
+footer .line-2{
+   
+    width:100%;
+    display:flex;
+    justify-content: space-evenly;
+    padding-top:2.5rem;
+    padding-bottom:1rem;
+    
+}
+footer .line-2 a{
+    color:white;
+}
+footer .line-2 a:hover{
+    color:var(--light-green);
+}
+/* ================================================================FOOTER========================================================== */
+
+
+
+/* =================================================FLOATING BUTTONS======================================================================== */
+.floating-buttons{
+    position:fixed;
+    /* position:absolute; */
+    right:5vw;
+    bottom:10vw;
+    font-size: 6.12rem;
+    background-color: var(--whatsapp-green);
+    border-radius: 50%;
+    height:8rem;
+    width:8rem;
+    transition: 0.4s;
+}
+.floating-buttons .floating-buttons-container{
+position:relative;
+width:100%;
+height:100%;
+}
+.floating-buttons .floating-buttons-container a i{
+    position: absolute;
+    color:white;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+.floating-buttons:hover{
+
+background-color: var(--light-green);
+}
+
+.floating-buttons:hover .floating-buttons-container a i{
+ color:var(--whatsapp-green); 
+}
+
+/* =================================================FLOATING BUTTONS======================================================================== */
+
+
+
+@media (max-width: 1024px) {
+    html {
+        font-size: 53%;
+    }
+    header .header-1 .hamburger {
+        position: relative;
+        display: block;
+    }
+    header .header-1 .navbar {
+        position: fixed;
+        opacity: 0;
+        background-color: black;
+        top: 50%;
+        left: 50%;
+        padding: 5rem 2rem;
+        transform: translate(-50%, -500%);
+        box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.4);
+        z-index: 10000;
+        transition: 0.4s;
+        border: 4px dashed #cbeb39;
+    }
+    header .header-1 .navbar-toggle {
+        opacity: 1;
+        z-index: 100;
+        transform: translate(-50%, -50%);
+    }
+
+    header .header-1 .navbar ul {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    header .header-1 .navbar ul li {
+        text-align: center;
+        margin: 3rem 2rem;
+        position: relative;
+        border-top: 3px solid #7bb601;
+        border-bottom: 3px solid #7bb601;
+    }
+
+    header .header-1 .navbar ul li a {
+        text-align: center;
+        font-size: 3rem;
+        margin: 3rem 2rem;
+        color: white;
+    }
+    header .header-1 .navbar ul li a:hover {
+        text-align: center;
+        font-size: 3.5rem;
+        margin: 10rem 2rem;
+        color: var(--light-green);
+    }
+    .hero .hero-container {
+        justify-content: center;
+    }
+    .hero .hero-container .hero-container-info {
+        align-items: center;
+        text-align: center;
+        padding-bottom: 5rem;
+    }
+}
+@media (max-width: 728px) {
+    html {
+        font-size: 48%;
+    }
+
+    header .header-1 {
+        padding: 0 5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 42%;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 36%;
+    }
+}
+
+@media (max-width: 380px) {
+    html {
+        font-size: 30%;
+    }
+}
+
+@media (max-width: 330px) {
+    html {
+        font-size: 25%;
+    }
+    header .header-1 .hamburger .hamburger-btn i {
+        font-size: 3rem;
+        padding: 0 0.5rem;
+        text-align: center;
+    }
+}
+@media (max-width: 230px) {
+    html {
+        font-size: 20%;
+    }
+}
+
+@media (max-width: 150px) {
+    html {
+        font-size: 14%;
+    }
+}
