@@ -440,8 +440,8 @@ header .header-1 .navbar ul li a:hover {
 .products .product-cards-container .product-card .product-card-image img {
   height: 32rem;
   width: 100%;
-  -o-object-fit: fill;
-     object-fit: fill;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .products .product-cards-container .product-card .product-card-title {

@@ -764,7 +764,12 @@
         "Weight: 5kg"
       ]
     },
-    "Reviews": [],
+    "Reviews": [
+      {
+        "reviewer": "Lakshit Jain",
+        "review": "good product\r\n"
+      }
+    ],
     "_locals": {}
   },
   "OCA GLUE REMOVER MOTOR": {

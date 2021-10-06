@@ -116,7 +116,7 @@ const allProductCards =
         },
 
     ],
-    "spareparts": [
+    "tools": [
 
         {
             heading: "SKT VS-01 7INCH BUILT-IN HEAVY VACUUM PUMP LCD SCREEN SEPARATOR",
@@ -132,6 +132,67 @@ const allProductCards =
             heading: "OCA GLUE REMOVER MOTOR",
             image: "pics/posters/18.png",
             price: "₹999.00"
+        }
+    ],
+    
+    "spareparts": [
+
+        {
+            heading: "WIPING CLOTH",
+            image: "pics/posters/19.png",
+            price: "₹150.00"
+        },
+        {
+            heading: "SJ OCA SHEET 5.7",
+            image: "pics/posters/20.png",
+            price: "₹900.00"
+        },
+        ,
+        {
+            heading: "SJ OCA SHEET 6.5",
+            image: "pics/posters/20.png",
+            price: "₹1,100.00"
+        },
+        ,
+        {
+            heading: "SJ OCA SHEET 6.8",
+            image: "pics/posters/20.png",
+            price: "₹1,200.00"
+        },
+        ,
+        {
+            heading: "SJ OCA SHEET 7.2",
+            image: "pics/posters/20.png",
+            price: "₹1,350.00"
+        },
+        {
+            heading: "FLYING EAGLEBLADE",
+            image: "pics/posters/21.png",
+            price: "₹400.00"
+        }
+        ,
+        {
+            heading: "FALCON SPRAY",
+            image: "pics/posters/22.png",
+            price: "₹150.00"
+        }
+        ,
+        {
+            heading: "ALIGNMENTMOLD+PUNCHINGRUBBER FOR IPHONE",
+            image: "pics/posters/23.png",
+            price: "₹400.00"
+        }
+        ,
+        {
+            heading: "B 700 GLUE",
+            image: "pics/posters/24.png",
+            price: "₹100.00"
+        }
+        ,
+        {
+            heading: "ROLLER",
+            image: "pics/posters/25.png",
+            price: "₹200.00"
         }
     ]
 
